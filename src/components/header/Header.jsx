@@ -15,13 +15,13 @@ function Header() {
               <div className="row align-items-center">
                 <div className="col-xl-2 col-lg-2 d-flex align-items-center justify-content-between">
                   <div className="logo">
-                    <a href="index.html">
+                    <Link to="/">
                       <img
                         src="/assets/img/logo/Grape Detection System (500 × 200 px) (500 × 130 px).png"
                         style={{ height: "60px" }}
                         alt=""
                       />
-                    </a>
+                    </Link>
                   </div>
                   <a
                     className="custom-hamburger-icon d-flex d-lg-none"
@@ -38,7 +38,7 @@ function Header() {
                       <nav>
                         <ul id="navigation">
                           <li>
-                            <a href="index.html">Home</a>
+                            <Link to="/">Home</Link>
                           </li>
                           <li>
                             <a href="#detect">detect</a>

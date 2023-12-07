@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
+
 function Footer() {
   return (
     <footer>
       <div
         className="footer-wrappr section-bg3 wow fadeInup"
-        style={{ backgroundImage: "/assets/img/gallery/footer-bg.png !importantjpx" }}
+        style={{
+          backgroundImage: "/assets/img/gallery/footer-bg.png !importantjpx",
+        }}
         data-wow-delay="0.6s"
       >
         <div className="footer-area footer-padding">
@@ -13,13 +17,13 @@ function Footer() {
                 <div className="single-footer-caption mb-50">
                   {/* logo  */}
                   <div className="footer-logo mb-25">
-                    <a href="index.html">
+                    <Link to="/">
                       <img
                         src="/assets/img/logo/Grape Detection System (500 × 200 px) (500 × 130 px).png"
                         style={{ height: "60px" }}
                         alt=""
                       />
-                    </a>
+                    </Link>
                   </div>
                   <d iv className="header-area">
                     <div className="main-header main-header2">
@@ -29,7 +33,7 @@ function Footer() {
                           <nav>
                             <ul>
                               <li>
-                                <a href="index.html">Home</a>
+                                <Link to="/">Home</Link>
                               </li>
                               <li>
                                 <a href="#detect">Detect</a>
@@ -110,8 +114,8 @@ function Footer() {
                     <p>
                       Copyright &copy;
                       <script>document.write(new Date().getFullYear());</script>
-                      <a href="index.html">Grape Detection System,</a> All
-                      rights reserved
+                      <Link to="/">Grape Detection System,</Link> All rights
+                      reserved
                     </p>
                   </div>
                 </div>
