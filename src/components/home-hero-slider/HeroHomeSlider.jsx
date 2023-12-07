@@ -20,9 +20,9 @@ function HeroHomeSlider() {
       });
     });
   }
-  function handleBeforeChange(e, slick, currentSlide, nextSlide) {
+  function handleBeforeChange(currentSlide, nextSlide) {
     var $animatingElements = $(
-      '.single-slider[data-slick-index="' + nextSlide + '"]'
+      '.slick-slide[data-index="' + nextSlide + '"]'
     ).find("[data-animation]");
     doAnimations($animatingElements);
   }
@@ -33,8 +33,9 @@ function HeroHomeSlider() {
     doAnimations($firstAnimatingElements);
   }
   const settings = {
-    dots: true,
-    infinite: true,
+    fade: true,
+    dots: false,
+    arrows: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,

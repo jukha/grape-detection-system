@@ -2788,6 +2788,9 @@ hr {
 .h1-testimonial-active.dot-style .slick-active button {
   color: #662d91;
 }
+.slick-slider {
+  overflow: hidden;
+}
 .slick-initialized .slick-slide {
   outline: 0;
 }
