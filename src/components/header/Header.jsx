@@ -1,5 +1,11 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
+  const [hideMobileMenu, setHideMobileMenu] = useState(true);
+  function handleMobileMenuToggle() {
+    setHideMobileMenu((state) => !state);
+  }
   return (
     <>
       <header>
@@ -7,7 +13,7 @@ function Header() {
           <div className="main-header header-sticky">
             <div className="container-fluid">
               <div className="row align-items-center">
-                <div className="col-xl-2 col-lg-2 col-md-1">
+                <div className="col-xl-2 col-lg-2 d-flex align-items-center justify-content-between">
                   <div className="logo">
                     <a href="index.html">
                       <img
@@ -17,6 +23,14 @@ function Header() {
                       />
                     </a>
                   </div>
+                  <a
+                    className="custom-hamburger-icon d-flex d-lg-none"
+                    onClick={handleMobileMenuToggle}
+                  >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </a>
                 </div>
                 <div className="col-xl-10 col-lg-10 col-md-10">
                   <div className="menu-main d-flex align-items-center justify-content-end">
@@ -43,7 +57,34 @@ function Header() {
                   </div>
                 </div>
                 <div className="col-12">
-                  <div className="mobile_menu d-block d-lg-none"></div>
+                  <div className="mobile_menu">
+                    <div
+                      className="slicknav_nav d-block d-lg-none"
+                      style={{
+                        height: hideMobileMenu ? "0" : "150px",
+                        paddingBlock: hideMobileMenu ? "0" : "19px",
+                        transition: "all 300ms ease-in-out",
+                      }}
+                    >
+                      <ul id="navigation" className="ml-0">
+                        <li>
+                          <Link onClick={handleMobileMenuToggle} to="/">
+                            Home
+                          </Link>
+                        </li>
+                        <li>
+                          <a onClick={handleMobileMenuToggle} href="#detect">
+                            detect
+                          </a>
+                        </li>
+                        <li>
+                          <a onClick={handleMobileMenuToggle} href="#benefits">
+                            Benefits
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

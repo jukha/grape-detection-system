@@ -102,7 +102,7 @@ function Footer() {
         </div>
         {/* footer-bottom area  */}
         <div className="footer-bottom-area">
-          <div className="container">
+          <div className="container overflow-hidden">
             <div className="footer-border">
               <div className="row">
                 <div className="col-xl-10">

@@ -6,7 +6,7 @@ import HeroHomeSlider from "../components/home-hero-slider/HeroHomeSlider";
 function Home() {
   return (
     <>
-      <Header />;
+      <Header />
       <main>
         <HeroHomeSlider />
         {/* About-2 Area Start  */}
@@ -84,9 +84,7 @@ function Home() {
             </div>
           </div>
         </div>
-        {/* ================ */}
-        {/* About-2 Area End */}
-        {/* ================ */}
+
         {/* =================== */}
         {/* Services Area Start  */}
         {/* =================== */}
@@ -226,9 +224,7 @@ function Home() {
             </div>
           </div>
         </div>
-        {/* =================== */}
-        {/* Services Area End  */}
-        {/* =================== */}
+
         {/* =============== */}
         {/* Team Area Start */}
         {/* =============== */}
@@ -286,9 +282,6 @@ function Home() {
             </div>
           </div>
         </section>
-        {/* =============== */}
-        {/* Team Area Start */}
-        {/* =============== */}
         {/* ===================== */}
         {/* Grapes Disease Start */}
         {/* ===================== */}
@@ -302,7 +295,7 @@ function Home() {
           </div>
           <div className="row mt-5">
             <div
-              className="col-6 text-center mx-auto d-flex justify-content-center wow fadeIn"
+              className="col-md-6 text-center mx-auto d-flex justify-content-center wow fadeIn"
               data-wow-delay="0.2s"
             >
               <div className="card" style={{ width: "44rem" }}>
@@ -325,7 +318,7 @@ function Home() {
             </div>
 
             <div
-              className="col-6 text-center d-flex justify-content-center wow fadeIn"
+              className="col-md-6 text-center d-flex justify-content-center wow fadeIn"
               data-wow-delay="0.4s"
             >
               <div className="card" style={{ width: "44rem" }}>
@@ -349,7 +342,7 @@ function Home() {
           </div>
           <div className="row mt-5">
             <div
-              className="col-6 text-center mx-auto d-flex justify-content-center wow fadeIn"
+              className="col-md-6 text-center mx-auto d-flex justify-content-center wow fadeIn"
               data-wow-delay="0.6s"
             >
               <div className="card" style={{ width: "44rem" }}>
@@ -372,7 +365,7 @@ function Home() {
             </div>
 
             <div
-              className="col-6 text-center d-flex justify-content-center wow fadeIn"
+              className="col-md-6 text-center d-flex justify-content-center wow fadeIn"
               data-wow-delay="0.8s"
             >
               <div className="card" style={{ width: "44rem" }}>
