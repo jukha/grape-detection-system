@@ -1,15 +1,35 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Header() {
   const [hideMobileMenu, setHideMobileMenu] = useState(true);
+  const [isSticky, setIsSticky] = useState(false);
+
   function handleMobileMenuToggle() {
     setHideMobileMenu((state) => !state);
   }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scroll = window.scrollY;
+      if (scroll < 400) {
+        setIsSticky(false);
+      } else {
+        setIsSticky(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <header>
-        <div className="header-area">
+        <div className={`header-area ${isSticky ? "sticky-bar" : ""}`}>
           <div className="main-header header-sticky">
             <div className="container-fluid">
               <div className="row align-items-center">
@@ -46,6 +66,12 @@ function Header() {
                           <li>
                             <a href="#benefits">Benefits</a>
                           </li>
+                          <li>
+                            <Link to="/login">Login</Link>
+                          </li>
+                          <li>
+                            <Link to="signup">Signup</Link>
+                          </li>
                         </ul>
                       </nav>
                     </div>
@@ -61,7 +87,7 @@ function Header() {
                     <div
                       className="slicknav_nav d-block d-lg-none"
                       style={{
-                        height: hideMobileMenu ? "0" : "150px",
+                        height: hideMobileMenu ? "0" : "200px",
                         paddingBlock: hideMobileMenu ? "0" : "19px",
                         transition: "all 300ms ease-in-out",
                       }}
@@ -81,6 +107,16 @@ function Header() {
                           <a onClick={handleMobileMenuToggle} href="#benefits">
                             Benefits
                           </a>
+                        </li>
+                        <li>
+                          <Link onClick={handleMobileMenuToggle} to="/login">
+                            Login
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={handleMobileMenuToggle} to="/signup">
+                            Signup
+                          </Link>
                         </li>
                       </ul>
                     </div>

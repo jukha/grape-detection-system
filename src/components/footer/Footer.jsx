@@ -82,8 +82,6 @@ function Footer() {
                           id="newsletter-form-email"
                           placeholder=" Email Address "
                           className="placeholder hide-on-focus"
-                          onfocus="this.placeholder = ''"
-                          onblur="this.placeholder = 'Enter your email'"
                         />
                         <div className="form-icon">
                           <button
